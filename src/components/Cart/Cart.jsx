@@ -3,9 +3,12 @@ import './Cart.css'
 const Cart = ({cart}) => {
     let totalPrice = 0;
     let totalShippingCharge = 0;
+    let quantity = 0;
     for(const product of cart){
-        totalPrice = totalPrice + product.price;
+        product.quantity = product.quantity || 1;
+        totalPrice = totalPrice + product.price * product.quantity;
         totalShippingCharge = totalShippingCharge + product.shipping;
+        quantity = quantity + product.quantity;
     }
     const totalTax = totalPrice * 5 / 100;
     const grandTotal = totalPrice + totalShippingCharge + totalTax;
