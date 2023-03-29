@@ -1,11 +1,9 @@
 import React from 'react';
 import './Cart.css'
 const Cart = ({cart}) => {
-    
     let totalPrice = 0;
     let totalShippingCharge = 0;
     for(const product of cart){
-        console.log(product)
         totalPrice = totalPrice + product.price;
         totalShippingCharge = totalShippingCharge + product.shipping;
     }
@@ -15,7 +13,7 @@ const Cart = ({cart}) => {
         <div className='cart-container'>
             <h3 className='cart-title'>Order Summery</h3>
             <div className="cart-details">
-                <p>Selected Items: ${cart.length}</p>
+                <p>Selected Items: {cart.length}</p>
                 <p>Total Price: ${totalPrice}</p>
                 <p>Total Shipping Charge: ${totalShippingCharge}</p>
                 <p>Tax: ${totalTax.toFixed(2)}</p>
