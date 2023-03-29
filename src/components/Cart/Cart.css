@@ -1,0 +1,26 @@
+.cart-container {
+    background: rgba(255, 153, 0, 0.3);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.cart-title {
+    text-align: center;
+    padding-top: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #1C2B35;
+}
+
+.cart-details {
+    margin-top: 70px;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 50px;
+    letter-spacing: 0.005em;
+    color: #2A414F;
+}
