@@ -65,5 +65,10 @@
     line-height: 18px;
     letter-spacing: 0.0125em;
     color: #0E161A;
+    cursor: pointer;
+}
 
+.btn-cart:hover {
+    background: #ffd18bec;
+    transition: 0.15s;
 }
