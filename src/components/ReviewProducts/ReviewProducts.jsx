@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import './ReviewProducts.css'
 
 const ReviewProducts = ({product}) => {
@@ -16,7 +18,7 @@ const ReviewProducts = ({product}) => {
                     <p className='review-shipping'>Shipping Charge: <span className='dynamic-shipping'>${shipping}</span></p>
                 </div>
                 <div>
-                    DI
+                    <FontAwesomeIcon icon={faTrash} />
                 </div>
             </div>
         </div>
