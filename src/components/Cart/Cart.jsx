@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import './Cart.css'
-const Cart = ({ cart, handleClearCart }) => {
+const Cart = ({ cart, handleClearCart, children }) => {
     let totalPrice = 0;
     let totalShippingCharge = 0;
     let quantity = 0;
@@ -32,6 +32,7 @@ const Cart = ({ cart, handleClearCart }) => {
                     <FontAwesomeIcon icon={faTrashCan} size='lg' color="white" />
                 </div>
             </div>
+            {children}
         </div>
     );
 };
