@@ -24,3 +24,22 @@
     letter-spacing: 0.005em;
     color: #2A414F;
 }
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 60px auto;
+    background-color: #FF3030;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-btn {
+    width: 100%;
+    color: white;
+    background: none;
+    border: none;
+}
