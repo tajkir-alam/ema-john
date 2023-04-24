@@ -12,6 +12,7 @@ import Inventory from './components/Inventory/Inventory';
 import Login from './components/Login/Login';
 import loadData from './LoadData/loadData';
 import Signup from './components/Signup/Signup';
+import AuthProviders from './Providers/AuthProviders';
 
 const router = createBrowserRouter([
   {
@@ -44,5 +45,7 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+  <AuthProviders>
+    <RouterProvider router={router} />
+  </AuthProviders>
 )
