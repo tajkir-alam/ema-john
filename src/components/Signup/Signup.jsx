@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import './Signup.css';
 import { Link } from 'react-router-dom';
 import googleSignup from '../../images/google-logo.png';
 
-
-const Login = () => {
+const Signup = () => {
     return (
         <div className='form-container'>
-            <h2 className='form-header'>Login</h2>
+            <h2 className='form-header'>Sign Up</h2>
 
             <form>
                 <div>
@@ -18,9 +18,13 @@ const Login = () => {
                     <input type="password" name="password" />
                 </div>
                 <div>
-                    <input className='btn-signup' type="submit" value="Login" />
+                    <label className='label' htmlFor="confirm-pass">Confirm Password</label>
+                    <input type="confirm-pass" name='confirm-pass' />
                 </div>
-                <p className='form-footer'>New to Ema-john? <Link to={'/signup'} className='form-footer-link' >Create New Account</Link></p>
+                <div>
+                    <input className='btn-signup' type="submit" value="Sign Up" />
+                </div>
+                <p className='form-footer'>Already have an account? <Link to={'/login'} className='form-footer-link' >Login</Link></p>
                 <div className='another-option'>
                     <div>
                         <hr />
@@ -41,4 +45,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;
