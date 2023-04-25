@@ -29,7 +29,7 @@ const Order = () => {
             </div>
             <div>
                 <Cart cart={cart} handleClearCart={handleClearCart} >
-                    <Link to={'/order-review'} className='proceed-link'>
+                    <Link to={'/checkout'} className='proceed-link'>
                         <button className='btn-proceed'>
                             Proceed Checkout
                             <FontAwesomeIcon icon={faCreditCard} size='lg' color="white" />

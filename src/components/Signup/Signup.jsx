@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import './Signup.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import googleSignup from '../../images/google-logo.png';
 import { AuthContext } from '../../Providers/AuthProviders';
 
 const Signup = () => {
     const [showPass, setShowPass] = useState(false);
-    const { signupUser } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const { signupUser, googleLogin } = useContext(AuthContext)
 
 
     const handleSignup = (event) => {
@@ -19,9 +20,21 @@ const Signup = () => {
         signupUser(email, password)
         .then( (result) => {
             console.log(result.user);
+            navigate('/login');
         })
         .catch( (error) => {
             console.log("Error is: ", error.message);
+        })
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then(result => {
+            console.log(result.user);
+            navigate('/')
+        })
+        .catch(error => {
+            console.log('Error is: ', error.message);
         })
     }
 
@@ -58,7 +71,7 @@ const Signup = () => {
                         <hr />
                     </div>
                 </div>
-                <div className='google-signup'>
+                <div className='google-signup' onClick={handleGoogleLogin}>
                     <img src={googleSignup} alt="" className='google-logo' />
                     <p>Continue with Google</p>
                 </div>

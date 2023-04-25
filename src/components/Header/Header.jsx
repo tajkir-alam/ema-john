@@ -22,7 +22,7 @@ const Header = () => {
                 <div className='nav'>
                     <Link to={'/'}>Order</Link>
                     <Link to={'/order-review'}>Order Review</Link>
-                    <Link to={'/checkout'}>Manage Inventory</Link>
+                    <Link to={'/inventory'}>Manage Inventory</Link>
                     {!user ?
                         <>
                             <Link to={'/login'}>Login</Link>
